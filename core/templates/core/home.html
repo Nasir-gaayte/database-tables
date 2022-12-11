@@ -1,6 +1,39 @@
 {% extends "core/base.html" %}
 
+{% block title %} Home {% endblock title %}
+    
+
 {% block content %}
-    <h1>hello world</h1>
+<div class="container">
+    <br><br><br>
+    <table class="table tabel-bordered" id="example" style="text-align: center;">
+        <thead>
+            <tr class="table-success">
+                <th>ID</th>   
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Salary</th>   
+                <th>Gender</th>   
+            </tr>
+        </thead>
+        <tbody>
+            {% for em in emploees %}
+            <tr>
+                <td>{{em.id}}</td>   
+                <td>{{em.name}}</td>   
+                <td>{{em.email}}</td>   
+                <td>{{em.phone}}</td>   
+                <td>{{em.salary}}</td>   
+                <td>{{em.gender}}</td>   
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</div>
+
+<br>
+<br>
+
 {% endblock content %}
     
